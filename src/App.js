@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const name ='Márcia!'
+
+  const newName = name.toUpperCase()
+
+  function sum(a,b){
+    return a + b
+  }
+
+  const url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzRTL7TRuzsT05NEr27mXbE-WRDlY3RTUPxw&usqp=CAU'
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Olá React!</h1>
+        <h2>Alterando JSX</h2>
+        <p>Olá, {name}</p> // interpolação da const nome
+        <p>Soma: {2 + 2}</p> //executa função
+        <p>Soma: {sum(1,2)}</p> //function sum
+        <img src={url} alt="Gato" />
     </div>
   );
 }
