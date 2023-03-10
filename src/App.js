@@ -1,29 +1,17 @@
 import HelloWord from './Components/HelloWorld';
 import './App.css';
+import SayMyName from './Components/SayMyName';
+import Pessoa from './Components/Pessoa'
 
 function App() {
-
-  const name ='Márcia!'
-
-  const newName = name.toUpperCase()
-
-  function sum(a,b){
-    return a + b
-  }
-
-  const url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzRTL7TRuzsT05NEr27mXbE-WRDlY3RTUPxw&usqp=CAU'
-
-
+  const nome = 'Maria'
   return (
     <div className="App">
-        <h1>Olá React!</h1>
-        <h2>Alterando JSX</h2>
-        <p>Olá, {name}</p> // interpolação da const nome
-        <p>Soma: {2 + 2}</p> //executa função
-        <p>Soma: {sum(1,2)}</p> //function sum
-       
-        <img src={url} alt="Gato" />
         <HelloWord/>
+        <SayMyName nome="Márcia"/> // valor fixo
+        <SayMyName nome={nome} />// valor dinamico
+        <Pessoa nome="Rodrigo"  idade="28" profissão="Programador" foto="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbc.com%2Fportuguese%2Fgeral-37268918&psig=AOvVaw2CQr6qc9PstUIzRPPZ9DjE&ust=1678563688863000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDropeP0v0CFQAAAAAdAAAAABAE" />
+
     </div>
   );
 }
