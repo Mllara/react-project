@@ -1,3 +1,4 @@
+import HelloWord from './Components/HelloWorld';
 import './App.css';
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
         <p>Olá, {name}</p> // interpolação da const nome
         <p>Soma: {2 + 2}</p> //executa função
         <p>Soma: {sum(1,2)}</p> //function sum
+       
         <img src={url} alt="Gato" />
+        <HelloWord/>
     </div>
   );
 }
